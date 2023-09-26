@@ -64,15 +64,21 @@ public class Main
             
             
             LOGGER.info("Writing the output file");
-            for(int i=0;i<lineRecords.size();i++)
-                {
-                LOGGER.info(lineRecords.get(i).line());
-                }
+
             
             FileOutputStream fos = new FileOutputStream(fileOutput);
             OutputStreamWriter writer = new OutputStreamWriter(fos,"UTF-8");
             try
                 {
+                writer.write(headline1+"\r\n");
+                writer.write(headline2+"\r\n");
+                for(int i=0;i<lineRecords.size();i++)
+                    {
+                    String line = lineRecords.get(i).line();
+                    writer.write(line+"\r\n");
+                    LOGGER.info(line);
+                    }
+                
                 
                 }
             catch(Exception e)
