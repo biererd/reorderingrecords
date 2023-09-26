@@ -1,7 +1,6 @@
 package ch.zh.reorderingrecords.main;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets.*;
 import java.util.*;
 
 import org.apache.logging.log4j.LogManager;
